@@ -14,6 +14,8 @@ Image Block for the [Editor.js](https://editorjs.io).
 - Pasting files and screenshots from Clipboard
 - Allows adding a border, and a background
 - Allows stretching an image to the container's full-width
+- Remove 'Caption' field
+- Allow to zoom image
 
 **Notes**
 
@@ -29,13 +31,13 @@ This Tool is also capable of uploading & displaying video files using the <video
 Get the package
 
 ```shell
-npm i --save-dev @editorjs/image
+npm i --save-dev @quocln/image
 ```
 
 Include module at your application
 
 ```javascript
-import ImageTool from '@editorjs/image';
+import ImageTool from '@quocln/image';
 ```
 
 ### Other methods
@@ -49,7 +51,7 @@ import ImageTool from '@editorjs/image';
 
 You can load a specific version of package from [jsDelivr CDN](https://www.jsdelivr.com/package/npm/@editorjs/image).
 
-`https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0`
+`https://cdn.jsdelivr.net/npm/@quocln/image@2.3.0`
 
 Then require this script on page with Editor.js through the `<script src=""></script>` tag.
 
@@ -58,7 +60,7 @@ Then require this script on page with Editor.js through the `<script src=""></sc
 Add a new Tool to the `tools` property of the Editor.js initial config.
 
 ```javascript
-import ImageTool from '@editorjs/image';
+import ImageTool from '@quocln/image';
 
 // or if you inject ImageTool via standalone script
 const ImageTool = window.ImageTool;
