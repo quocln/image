@@ -7,10 +7,12 @@
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
 
     &-picture {
       max-width: 100%;
-      vertical-align: bottom;
+      vertical-align: middle;
       display: block;
     }
 
@@ -43,35 +45,8 @@
     }
   }
 
-  &__caption {
-    &[contentEditable="true"][data-placeholder]::before {
-      position: absolute !important;
-      content: attr(data-placeholder);
-      color: #707684;
-      font-weight: normal;
-      display: none;
-    }
-
-    &[contentEditable="true"][data-placeholder]:empty {
-      &::before {
-        display: block;
-      }
-
-      &:focus::before {
-        display: none;
-      }
-    }
-  }
-
   &--empty {
     ^&__image {
-      display: none;
-    }
-  }
-
-  &--empty,
-  &--loading {
-    ^&__caption {
       display: none;
     }
   }
@@ -156,4 +131,9 @@
   100% {
     transform: rotate(360deg);
   }
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
 }
